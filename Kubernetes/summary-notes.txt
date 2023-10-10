@@ -1,0 +1,44 @@
+KUBERNETES
+----------
+
+Is in short a container orchestration platform. It mainly solve the problemes of container platforms
+where container are short lived amongst other issues.
+
+K8S Architecture
+---------------
+
+
+MASTER NODE                                                |            WORKER NODE
+(Control plane)                                            |           (Data plane)
+-----------------------------------------------------------|--------------------------------------------------------------
+-API Server: - Handles all communication for k8s cluster   |-Kubelets(k8s node agent): - Manages communication with master            
+               (from nodes and outside).                   |                             node(s)                 
+                                                           |                           - Creation of the pods and ensure  
+-Scheduler: -Decides placement of pods.                    |                             pod is always running state                             
+                                                           |                                                         
+                                                           |-Kube-proxy: - Handles networking, IP addresses, and Load
+-Control manager: - manages deployement and replicasets.   |               Balancing capabilities.                                
+                                                           |                      
+-etcd: - Distributed db storing the cluster settings.      |-Container runtime: - Actually responsible for running your 
+                                                           |                      containers.    
+                                                           
+                                                           
+                                                           
+                                                           
+                                                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
